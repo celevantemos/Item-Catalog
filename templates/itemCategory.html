@@ -1,0 +1,37 @@
+{% include 'headers.html' %}
+{% extends 'main.html' %}
+{% block content %}
+
+
+<html>
+<body>
+  <div>
+    <h2>{{item.name}}</h2>
+    <div class="panel panel-success">
+      <div class="panel-heading"><h3>Description</h3></div>
+      <div class="panel-body">{{item.description}}</div>
+    </div>
+    <!-- <a href="url_for('editCatalogItem', item.name )">Edit</a> -->
+    <!-- <a href="url_for('catalog')">Cancel</a> -->
+
+    <a href="{{url_for('editCatalogItem', item_name=item.name)}}" class='btn'>
+      <button class="btn btn-default">
+    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Edit</button>
+    </a>
+    <a href = "{{url_for('deleteCatalogItem', item_name=item.name)}}">
+      <button class="btn btn-default delete">
+      <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Delete</button>
+    </a>
+    <a href = '{{url_for('catalog')}}' class='btn'>
+      <button class="btn btn-default">
+      <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span> Cancel
+      </button>
+    </a>
+  </div>
+</body>
+</html>
+
+
+
+
+{% endblock %}

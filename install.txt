@@ -1,0 +1,12 @@
+Flask
+Flask-HTTPAuth
+Flask-Login
+Flask-SQLAlchemy
+httplib2
+oauth2client
+psycopg2
+redis
+requests
+SQLAlchemy
+urllib3
+Werkzeug

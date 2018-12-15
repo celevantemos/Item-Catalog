@@ -1,0 +1,50 @@
+{% include 'headers.html' %}
+{% extends 'main.html' %}
+{% block content %}
+
+
+<html>
+
+<body>
+  <div class="col-md-4">
+    <h2>Categories</h2>
+    <nav>
+      {% for category in categories %}
+      <li>
+        <a class="categories-list" class="categories-list" href="{{url_for('showCategoryItems', catalog_name=category.name)}}">
+          {{category.name}}
+        </a>
+      </li>
+      {% endfor %}
+    </nav>
+  </div>
+  <div class="col-md-6">
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages%}
+    <strong>{{message}}</strong>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <div class="row">
+      <a href="{{url_for('newItem')}}">
+        <button class="btn btn-default">
+          <span class="glyphicon glyphicon-glass" aria-hidden="true"></span>Add An Item
+          <div class="col-md-7"></div>
+        </button>
+      </a>
+    </div>
+    <h2>Latest Items...</h2>
+    {% for item in items %}
+    <a class="items-list" href="{{url_for('showItem', catalog_name=item.category.name, item_name=item.name)}}">
+      <li>
+        <span class="item__name">{{item.name}}</span>
+        <span class="item__type"><small class='text-success'>({{item.category.name}})</small></span>
+      </li>
+    </a>
+    {% endfor %}
+  </div>
+</body>
+
+</html>
+{% endblock %}

@@ -1,0 +1,35 @@
+* {
+	font-family: "Helvetica Neue Bold", Roboto, Helvetica, Arial, sans-serif;
+	font-weight: 700;
+}
+body{
+  background-color: lightBlue;
+}
+li {
+	list-style:none;
+}
+
+.bgcol{
+  background-color: black;
+  color:white;
+}
+
+.login{
+  color:white;
+}
+
+.main{
+  background-color: grey;
+}
+
+.row{
+  margin-top:10px;
+}
+
+.categories-list{
+  font-size:20;
+}
+
+.margin-top{
+  margin-top: 10px;
+}
