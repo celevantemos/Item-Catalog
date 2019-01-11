@@ -22,7 +22,7 @@ DBSession = sessionmaker(bind=engine)
 # session.rollback()
 session = DBSession()
 
-user1 = User(id=1, name='Mohammad Alhashim',
+user1 = User(name='Mohammad Alhashim',
              email='myhony14@gmail.com',
              picture='''https://lh3.googleusercontent.com
              /-G3SKLlQPSbs/AAAAAAAAAAI/AAAAAAAAAZM/j_Cs5kwVQ-k/photo.jpg''',
@@ -30,48 +30,48 @@ user1 = User(id=1, name='Mohammad Alhashim',
 session.add(user1)
 session.commit()
 
-category1 = Category(id=1, name="Soccer", user_id=1)
+category1 = Category(name="Soccer", user_id=1)
 session.add(category1)
 session.commit()
 
-category2 = Category(id=2, name="Basketball", user_id=1)
+category2 = Category(name="Basketball", user_id=1)
 session.add(category2)
 session.commit()
 
-category3 = Category(id=3, name="Baseball", user_id=1)
+category3 = Category(name="Baseball", user_id=1)
 session.add(category3)
 session.commit()
 
-category4 = Category(id=4, name="Frisbee", user_id=1)
+category4 = Category(name="Frisbee", user_id=1)
 session.add(category4)
 session.commit()
 
-category5 = Category(id=5, name="SnowBoarding", user_id=1)
+category5 = Category(name="SnowBoarding", user_id=1)
 session.add(category5)
 session.commit()
 
-category6 = Category(id=6, name="Rock Climbing", user_id=1)
+category6 = Category(name="Rock Climbing", user_id=1)
 session.add(category6)
 session.commit()
 
-category7 = Category(id=7, name="Football", user_id=1)
+category7 = Category(name="Football", user_id=1)
 session.add(category7)
 session.commit()
 
-category8 = Category(id=8, name="Skating", user_id=1)
+category8 = Category(name="Skating", user_id=1)
 session.add(category8)
 session.commit()
 
-category9 = Category(id=9, name="Hockey", user_id=1)
+category9 = Category(name="Hockey", user_id=1)
 session.add(category9)
 session.commit()
 
-item1 = Items(id=1, name="Wold Cup 2018 Ball", description='''One of the best
+item1 = Items(name="Wold Cup 2018 Ball", description='''One of the best
 labtops around the world''', category_id=1, user_id=1)
 session.add(item1)
 session.commit()
 
-item2 = Items(id=2, name="Portable Basketball Hoop", description='''This
+item2 = Items(name="Portable Basketball Hoop", description='''This
 basketball hoops clear view, shatter proof polycarbonate steel framed backboard
 is 50" x 33" and just 1" thick. Speed Shift height adjustment
 mechanism lets you raise and lower the hoop with just one hand.
@@ -81,7 +81,7 @@ session.add(item2)
 session.commit()
 
 
-item3 = Items(id=3, name="Marucci CAT8 BBCOR Bat 2019", description='''One
+item3 = Items(name="Marucci CAT8 BBCOR Bat 2019", description='''One
 piece alloy with superior strength, the 2019 Marucci CAT8 BBCOR Bat
 provides a higher response rate off the barrel and better durability.
 The precision balanced barrel features a ring free multi variable wall
@@ -91,21 +91,21 @@ feedback''', category_id=3, user_id=1)
 session.add(item3)
 session.commit()
 
-item4 = Items(id=4, name="Club Jr Ultimate Gloves", description='''The gloves
+item4 = Items(name="Club Jr Ultimate Gloves", description='''The gloves
 consist of an ultra stretch material that will form to your hands on the back
 and wrists, and a grippy material to aid in catching and throwing on the
 front of the gloves.''', category_id=4, user_id=1)
 session.add(item4)
 session.commit()
 
-item5 = Items(id=5, name="Men's Burton Custom Snowboard", description='''The
+item5 = Items(name="Men's Burton Custom Snowboard", description='''The
 mosttrusted board ever, backed by a cult following as snowboardings one
 answer to
 all terrain''', category_id=5, user_id=1)
 session.add(item5)
 session.commit()
 
-item6 = Items(id=6, name='''La Sportiva Tarantulace Climbing
+item6 = Items(name='''La Sportiva Tarantulace Climbing
 Shoes''', description='''Designed for the climber looking for a single pair to
 do it all, the La Sportiva Tarantulace are jack of all trades climbing shoes
 comfortable enough for all day climbs or a trip to the rock
@@ -113,7 +113,7 @@ gym.''', category_id=6, user_id=1)
 session.add(item6)
 session.commit()
 
-item7 = Items(id=7, name='''Champro Man-Up TRI FLEX Adult 5 Pad Integrated
+item7 = Items(name='''Champro Man-Up TRI FLEX Adult 5 Pad Integrated
 Football Girdle''', description='''Featuring TRI FLEX cushioned padding for
 the hips, thighs and tailbone. Low-profile and ventilated, these pads
 provide the ultimate in protection, flexibility and
@@ -122,7 +122,7 @@ session.add(item7)
 session.commit()
 
 
-item8 = Items(id=8, name="SUPER TACKS AS1 STICK", description='''The new
+item8 = Items(name="SUPER TACKS AS1 STICK", description='''The new
 SuperTacks AS1 pushes the boundaries of performance and will
 become the new standard for Mid-Kick point sticks. The stiffness
 profile has been revisited to maximize loading while providing great
@@ -133,7 +133,7 @@ durability.''', category_id=9, user_id=1)
 session.add(item8)
 session.commit()
 
-item9 = Items(id=9, name='''adidas Cristiano Ronaldo Juventus
+item9 = Items(name='''adidas Cristiano Ronaldo Juventus
 3rd Jersey''', description='''He is Machiavellian in his ruthlessness. Every
 teammate of CR7 speaks of his drive to be the best. He takes no prisoners.
 He craves to be the greatest footballer ever and he has been finely rewarded
@@ -145,7 +145,7 @@ wear this shirt''', category_id=1, user_id=1)
 session.add(item9)
 session.commit()
 
-item10 = Items(id=10, name='''Nike SuperflyX 6 Elite IC Black Total
+item10 = Items(name='''Nike SuperflyX 6 Elite IC Black Total
 Orange''', description='''Its not enough to just be fast, you have to
 be the fastest! Its not enough to just be good, you need to be the best!Your
 shoe cant just be great, it has to be the greatest! With that being said,
@@ -157,7 +157,7 @@ never be the same!''', category_id=1, user_id=1)
 session.add(item10)
 session.commit()
 
-item11 = Items(id=11, name='''Nike Merlin Match Soccer
+item11 = Items(name='''Nike Merlin Match Soccer
 Ball Hi Vis''', description='''We just need to be noisy and share awesomeness
 with you for an unrelenting minute. This 2018/19 Nike Hi Vis Merlin Match
 Soccer Ball is such a blast. This may be the most fun ball we've ever had
@@ -169,7 +169,7 @@ a party to own.''', category_id=1, user_id=1)
 session.add(item11)
 session.commit()
 
-item12 = Items(id=12, name='''Nike Ordem V Match Soccer Ball
+item12 = Items(name='''Nike Ordem V Match Soccer Ball
 Premier League   White Crimson''', description='''Aerowtrac grooves allow the
 ball to fly accurately towards wherever you send it. This ball is made of
 fuse-welded synthetic leather to give you great touch and responsiveness,
@@ -180,7 +180,7 @@ order today, you can too!''', category_id=1, user_id=1)
 session.add(item12)
 session.commit()
 
-item13 = Items(id=13, name='''Reusch Prisma Supreme G3 Fusion Ortho-Tec
+item13 = Items(name='''Reusch Prisma Supreme G3 Fusion Ortho-Tec
 Goalkeeper Gloves   Shocking Orange Blue''', description='''Goalkeepers are
 tasked with a very hard job, but with the right tools everything can be made
 easier. Goalkeepers look for gloves that provide them with a firm grip on
